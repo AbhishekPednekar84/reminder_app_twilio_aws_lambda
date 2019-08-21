@@ -1,0 +1,14 @@
+{
+    "events": [
+        {
+            "title": "Electricity Bill",
+            "due": "17",
+            "frequency": "M"
+        },
+        {
+            "title": "Car Insurance Premium",
+            "due": "8-1",
+            "frequency": "Y"
+        }
+    ]
+}
