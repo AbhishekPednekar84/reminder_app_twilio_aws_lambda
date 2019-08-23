@@ -8,13 +8,12 @@ def check_appointments(event=None, context=None):
     """This method reads the reminder_events.json file to determine if any of the monthly or annual reminders are due today. If yes, a call is made to the send_whatsapp_message() method to send an event reminder to the recipients listed in directory.json
     """
 
-    # Set all the date related attributes
-    current_date = datetime.now()
-    current_day = current_date.today().day
-    current_month = current_date.today().month
+    # Extract the day and month from today's date
+    current_day = datetime.today().day
+    current_month = datetime.today().month
 
     # Sent the date format as Month, Day Ex: August, 21
-    formatted_date = current_date.strftime("%B, %d")
+    formatted_date = datetime.today().strftime("%B, %d")
 
     with open("reminder_events.json", "r") as f:
         reminders = json.load(f)
